@@ -2,6 +2,7 @@
 /**
  * @author Keyvan Akbary <me@keyvanakbary.com>
  * @author Nigel McNie <nigel@geshi.org>
+ * @author FoxP2 <foxp2projects@gmail.com>
  * @version 1.0.1
  */
 $language_data = array(
@@ -15,30 +16,31 @@ $language_data = array(
         //TWIG
         //Tags
         1 => array(
-            'autoescape', 'endautoescape', 'block', 'endblock', 'extends',
-            'filter', 'endfilter', 'for', 'endfor', 'from', 'if', 'else', 'elseif', 'endif',
+            'autoescape', 'endautoescape', 'block', 'endblock', 'do', 'extends',
+            'embed', 'endembed',
+            'filter', 'endfilter', 'for', 'endfor', 'from', 'flush', 'if', 'else', 'elseif', 'endif',
             'import', 'include', 'macro', 'endmacro', 'raw', 'endraw', 'set',
-            'spaceless', 'endspaceless', 'use'
+            'spaceless', 'sandbox', 'endsandbox', 'endspaceless', 'use', 'verbatim', 'endverbatim'
         ),
         //Filters
         2 => array(
-            'capitalize', 'convert_encoding', 'date', 'default', 'escape',
-            'format', 'join', 'json_encode', 'keys', 'length', 'lower', 'merge',
-            'raw', 'replace', 'reverse', 'sort', 'striptags', 'title', 'upper',
+            'abs', 'batch', 'capitalize', 'convert_encoding', 'date', 'date_modify', 'default', 'escape',
+            'first', 'format', 'join', 'json_encode', 'keys', 'last', 'length', 'lower', 'nl2br', 'number_format', 'merge',
+            'raw', 'replace', 'reverse', 'slice', 'sort', 'split', 'striptags', 'title', 'trim', 'upper',
             'url_encode'
         ),
         //Functions
         3 => array(
-            'attribute', 'block', 'constant', 'cycle', 'parent', 'range'
+            'attribute', 'block', 'constant', 'cycle', 'date', 'dump', 'include', 'parent', 'random', 'range', 'template_from-string'
         ),
         //Tests
         4 => array(
-            'constant', 'defined', 'divisibleby', 'empty', 'even', 'null',
+            'constant', 'defined', 'divisibleby', 'empty', 'even', 'iterable', 'null',
             'odd', 'sameas'
         ),
         //Operators
         5 => array(
-            'in', 'is', 'and', 'or', 'not'
+            'in', 'is', 'is not' ,'and', 'or', 'not'
         ),
         //HTML Support
         //Tags
