@@ -64,7 +64,8 @@ class Geshi extends AbstractProvider implements ProviderInterface
 	public function getHtml($source, $language, $filename)
 	{
 		$geshi = self::getInstance(true);
-		$geshi->applyOptions($language);	 
+		$geshi->applyOptions($language);
+		$geshi->highlighter->set_link_target('_blank');
 		$geshi->highlighter->set_source($source);
 		$geshi->highlighter->set_language($language);
 		$geshi->highlighter->enable_classes(true);
