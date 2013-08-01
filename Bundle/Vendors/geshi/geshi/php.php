@@ -1051,7 +1051,7 @@ $language_data = array(
     'URLS' => array(
         1 => '',
         2 => '',
-        3 => 'http://www.php.net/{FNAMEL}',
+        3 => 'http://fr2.php.net/{FNAMEL}',
         4 => ''
         ),
     'OOLANG' => true,
