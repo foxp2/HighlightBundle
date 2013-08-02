@@ -16,11 +16,12 @@ $language_data = array(
         //TWIG
         //Tags
         1 => array(
-            'autoescape', 'endautoescape', 'block', 'endblock', 'do', 'extends',
-            'embed', 'endembed',
-            'filter', 'endfilter', 'for', 'endfor', 'from', 'flush', 'if', 'else', 'elseif', 'endif',
-            'import', 'include', 'macro', 'endmacro', 'raw', 'endraw', 'set',
-            'spaceless', 'sandbox', 'endsandbox', 'endspaceless', 'use', 'verbatim', 'endverbatim'
+            'autoescape', 'block', 'do', 'extends',
+            'embed',
+            'filter', 'for', 'from', 'flush', 'if', 'else', 'elseif',
+            'import', 'include', 'macro', 'raw', 'set',
+            'spaceless', 'sandbox', 'use', 'verbatim'     
+
         ),
         //Filters
         2 => array(
@@ -40,19 +41,19 @@ $language_data = array(
         ),
         //Operators
         5 => array(
-            'in', 'is', 'is not' ,'and', 'or', 'not'
+            'in', 'is', 'is not' , 'or', 'not'
         ),
         //HTML Support
         //Tags
         6 => array(
             'abbr', 'acronym', 'address', 'applet',
             'base', 'basefont', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'b',
-            'caption', 'center', 'cite', 'code', 'colgroup', 'col',
+            'caption', 'center', 'cite','class', 'code', 'colgroup', 'col',
             'dd', 'del', 'dfn', 'dir', 'div', 'dl', 'dt',
             'em',
             'fieldset', 'font', 'form', 'frame', 'frameset',
             'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'hr', 'html',
-            'iframe', 'ilayer', 'img', 'input', 'ins', 'isindex', 'i',
+            'id', 'iframe', 'ilayer', 'img', 'input', 'ins', 'isindex', 'i',
             'kbd',
             'label', 'legend', 'link', 'li',
             'map', 'meta',
@@ -87,9 +88,13 @@ $language_data = array(
             'valign', 'value', 'valuetype', 'version', 'vlink', 'vspace',
             'width'
         ),
-        //FoxP2
+        //FoxP2 : these tags are not linked for twig documentation
         8 => array(
-            'id', 'class'
+            'endautoescape', 'endblock', 
+            'endembed',
+            'endfilter', 'endfor', 'endif',
+            'endmacro', 'endraw', 'endset',
+            'endsandbox', 'endspaceless', 'endverbatim', 'and'  
         )        
     ),
     'SYMBOLS' => array(
@@ -101,7 +106,7 @@ $language_data = array(
     'CASE_SENSITIVE' => array(
         GESHI_COMMENTS => false,
         //Twig
-        1 => true,
+        1 => false,
         2 => true,
         3 => true,
         4 => true,
@@ -113,14 +118,14 @@ $language_data = array(
     ),
     'STYLES' => array(
         'KEYWORDS' => array(
-            1 => 'color: rgb(255, 132, 0);', //Tags
-            2 => 'color: #008000;', //Filters
-            3 => 'color: #0600FF;', //Functions
-            4 => 'color: #804040;', //Tests
-            5 => 'color: #008000;', //Operators
+            1 => 'background-color:#ccc;color: rgb(255, 132, 0);', //Tags
+            2 => 'background-color:#ccc;color: #008000;', //Filters
+            3 => 'background-color:#ccc;color: #0600FF;', //Functions
+            4 => 'background-color:#ccc;color: #804040;', //Tests
+            5 => 'background-color:#ccc;color: #008000;', //Operators
             6 => 'color: #000000; font-weight: bold;', //HTML Tags
             7 => 'color: #000066;', //HTML attributes
-            8 => 'color: #232125; font-weight: bold;' //FoxP2
+            8 => 'color: red; font-weight: bold;' //FoxP2
         ),
         'COMMENTS' => array(
             'MULTI' => 'color: #008080; font-style: italic;'
@@ -194,9 +199,9 @@ $language_data = array(
         0 => false, //Doctype
         1 => false, //Entities
         2 => true, //HTML
-        3 => true //Twig        
+        3 => true //Twig         
     ),
-    'TAB_WIDTH' => 4,
+    'TAB_WIDTH' => 8,
     'PARSER_CONTROL' => array(
         'KEYWORDS' => array(
             2 => array(
